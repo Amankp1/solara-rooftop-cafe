@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solara Rooftop Cafe | Vancouver, BC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">SOLARA</div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="nav-menu">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#ambiance">AMBIANCE</a></li>
+                <li><a href="#food-menu">MENU</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#location">LOCATION</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <video autoplay muted loop playsinline poster="/assests/video/image.png">
+            <source src="/assests/video/4926423-uhd_4096_2160_30fps.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>SOLARA</h1>
+                <p>ROOFTOP CAFE • VANCOUVER</p>
+                <a href="#reservation" class="btn">RESERVE YOUR TABLE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>OUR STORY</h2>
+                <p>Nestled in the heart of Vancouver, Solara Rooftop Cafe offers an unparalleled dining experience where
+                    artisanal coffee meets breathtaking city views. Our rooftop sanctuary is a celebration of Pacific
+                    Northwest flavors, crafted with passion and precision.</p>
+                <p>From sunrise lattes to sunset aperitifs, we invite you to savor every moment in our carefully curated
+                    space. Each cup is a journey, each meal a memory, all set against the stunning Vancouver skyline.
+                </p>
+                <p>Join us where the city meets the sky, and every visit becomes a cherished escape.</p>
+            </div>
+            <div class="about-image">
+                <img src="/assests/video/images/North-vancouver-bc-coffee-shop-espresso-bar-nomad.jpg"
+                    alt="Solara Cafe Interior">
+            </div>
+        </div>
+    </section>
+
+    <!-- Ambiance Section -->
+    <section id="ambiance" class="ambiance">
+        <div class="container">
+            <h2>EXPERIENCE</h2>
+            <div class="ambiance-grid">
+                <div class="ambiance-item">
+                    <img src="/assests/video/images/black_blue_rooftop_garden_patio_8.jpg" alt="Rooftop Seating">
+                    <div class="ambiance-overlay">
+                        <h3>ROOFTOP TERRACE</h3>
+                    </div>
+                </div>
+                <div class="ambiance-item">
+                    <img src="/assests/video/images/image.png" alt="Indoor Seating">
+                    <div class="ambiance-overlay">
+                        <h3>COZY INTERIOR</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Preview -->
+    <section id="food-menu" class="menu-preview">
+        <div class="container">
+            <h2>CRAFTED WITH CARE</h2>
+            <p style="max-width: 700px; margin: 0 auto; font-size: 1.1rem; color: #666;">Every dish and drink at Solara
+                is thoughtfully prepared using locally sourced ingredients and time-honored techniques.</p>
+
+            <div class="menu-categories">
+                <div class="menu-card" onclick="openMenuModal('coffee')">
+                    <div class="menu-card-image">
+                        <img src="/assests/coffee_menu.png" alt="Coffee">
+                    </div>
+                    <h3>COFFEE</h3>
+                    <p>Specialty single-origin beans roasted locally, crafted into espresso perfection</p>
+                    <span class="view-menu">View Full Menu →</span>
+                </div>
+                <div class="menu-card" onclick="openMenuModal('brunch')">
+                    <div class="menu-card-image">
+                        <img src="/assests/brunch_menu.png" alt="Brunch">
+                    </div>
+                    <h3>BRUNCH</h3>
+                    <p>Fresh, seasonal ingredients transformed into memorable morning experiences</p>
+                    <span class="view-menu">View Full Menu →</span>
+                </div>
+                <div class="menu-card" onclick="openMenuModal('pastries')">
+                    <div class="menu-card-image">
+                        <img src="/assests/pastries_menu.png" alt="Pastries">
+                    </div>
+                    <h3>PASTRIES</h3>
+                    <p>House-baked delights made daily by our artisan pastry team</p>
+                    <span class="view-menu">View Full Menu →</span>
+                </div>
+                <div class="menu-card" onclick="openMenuModal('cocktails')">
+                    <div class="menu-card-image">
+                        <img src="/assests/cocktails_menu.png" alt="Cocktails">
+                    </div>
+                    <h3>COCKTAILS</h3>
+                    <p>Innovative libations featuring botanical infusions and local spirits</p>
+                    <span class="view-menu">View Full Menu →</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Modal -->
+    <div id="menuModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeMenuModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <div id="menuItems" class="menu-items"></div>
+        </div>
+    </div>
+
+    <!-- Gallery -->
+    <section id="gallery" class="gallery">
+        <h2>GALLERY</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="/assests/video/image.png" alt="Artisan Pastries">
+            </div>
+            <div class="gallery-item">
+                <img src="/assests/image.png" alt="Fresh Salad">
+            </div>
+            <div class="gallery-item">
+                <img src="/image copy 2.png" alt="Salmon Benedict">
+            </div>
+            <div class="gallery-item">
+                <img src="/assests/video/images/11.jpg" alt="Pastry Selection">
+            </div>
+            <div class="gallery-item">
+                <img src="/image.png" alt="Latte Art">
+            </div>
+            <div class="gallery-item">
+                <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                    <source src="/6602057-hd_1920_1080_30fps.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section id="location" class="location">
+        <div class="container">
+            <div class="location-info">
+                <h2>FIND US</h2>
+                <div class="location-details">
+                    <h3>ADDRESS</h3>
+                    <p>123 Rooftop Avenue<br>Vancouver, BC V6B 2K9<br>Canada</p>
+                </div>
+                <div class="location-details">
+                    <h3>HOURS</h3>
+                    <p>Monday - Friday: 7:00 AM - 10:00 PM<br>
+                        Saturday - Sunday: 8:00 AM - 11:00 PM</p>
+                </div>
+                <div class="location-details">
+                    <h3>CONTACT</h3>
+                    <p>Phone: (604) 555-0123<br>
+                        Email: hello@solararooftop.ca</p>
+                </div>
+            </div>
+            <div class="location-image">
+                <img src="/Screenshot 2026-01-13 154033.png" alt="Vancouver Location">
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="reservation">
+        <div class="container">
+            <h2>RESERVE A TABLE</h2>
+            <p style="margin-bottom: 3rem; opacity: 0.8;">Book your rooftop dining experience with us. We look forward
+                to welcoming you.</p>
+            <form onsubmit="handleReservation(event)" class="reservation-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" name="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" name="email" placeholder="john@example.com" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" name="phone" placeholder="(604) 555-0123" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Number of Guests *</label>
+                        <select name="guests" required>
+                            <option value="">Select guests</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                            <option value="6">6 Guests</option>
+                            <option value="7+">7+ Guests</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Date *</label>
+                        <input type="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Time *</label>
+                        <select name="time" required>
+                            <option value="">Select time</option>
+                            <option value="7:00 AM">7:00 AM</option>
+                            <option value="8:00 AM">8:00 AM</option>
+                            <option value="9:00 AM">9:00 AM</option>
+                            <option value="10:00 AM">10:00 AM</option>
+                            <option value="11:00 AM">11:00 AM</option>
+                            <option value="12:00 PM">12:00 PM</option>
+                            <option value="1:00 PM">1:00 PM</option>
+                            <option value="2:00 PM">2:00 PM</option>
+                            <option value="3:00 PM">3:00 PM</option>
+                            <option value="4:00 PM">4:00 PM</option>
+                            <option value="5:00 PM">5:00 PM</option>
+                            <option value="6:00 PM">6:00 PM</option>
+                            <option value="7:00 PM">7:00 PM</option>
+                            <option value="8:00 PM">8:00 PM</option>
+                            <option value="9:00 PM">9:00 PM</option>
+                            <option value="10:00 PM">10:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Seating Preference</label>
+                    <select name="seating">
+                        <option value="">No preference</option>
+                        <option value="rooftop">Rooftop Terrace</option>
+                        <option value="indoor">Indoor Seating</option>
+                        <option value="window">Window View</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Special Requests or Dietary Requirements</label>
+                    <textarea name="requests"
+                        placeholder="Let us know if you have any special occasions, allergies, or preferences..."
+                        rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">CONFIRM RESERVATION</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>GET IN TOUCH</h2>
+            <p style="margin-bottom: 2rem; opacity: 0.8;">Have a question or want to reach out? We'd love to hear from
+                you.</p>
+            <form onsubmit="handleSubmit(event)">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">SEND MESSAGE</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Solara Rooftop Cafe. All rights reserved. | Vancouver, BC</p>
+    </footer>
+
+    <script>
+        // Menu Data
+        const menuData = {
+            coffee: [
+                { name: "Espresso", description: "Single shot of our signature dark roast", price: "$3.50" },
+                { name: "Americano", description: "Espresso with hot water", price: "$4.00" },
+                { name: "Cappuccino", description: "Espresso with steamed milk and foam", price: "$4.75" },
+                { name: "Latte", description: "Espresso with steamed milk", price: "$5.00" },
+                { name: "Flat White", description: "Rich espresso with velvety microfoam", price: "$5.25" },
+                { name: "Mocha", description: "Espresso with chocolate and steamed milk", price: "$5.50" },
+                { name: "Cortado", description: "Equal parts espresso and steamed milk", price: "$4.50" },
+                { name: "Cold Brew", description: "Smooth, slow-steeped coffee over ice", price: "$5.00" },
+                { name: "Nitro Cold Brew", description: "Creamy nitrogen-infused cold brew", price: "$6.00" },
+                { name: "Iced Latte", description: "Chilled espresso with cold milk", price: "$5.50" }
+            ],
+            brunch: [
+                { name: "Avocado Toast", description: "Sourdough, smashed avocado, cherry tomatoes, poached eggs", price: "$16.00" },
+                { name: "Classic Eggs Benedict", description: "English muffin, poached eggs, hollandaise, Canadian bacon", price: "$18.00" },
+                { name: "Salmon Benedict", description: "House-cured salmon, spinach, hollandaise", price: "$20.00" },
+                { name: "French Toast", description: "Brioche, berry compote, maple syrup, whipped cream", price: "$15.00" },
+                { name: "Pancake Stack", description: "Buttermilk pancakes, seasonal fruit, maple butter", price: "$14.00" },
+                { name: "Breakfast Burrito", description: "Scrambled eggs, chorizo, cheese, salsa, breakfast potatoes", price: "$17.00" },
+                { name: "Shakshuka", description: "Poached eggs in spiced tomato sauce, feta, pita bread", price: "$16.00" },
+                { name: "Smoked Salmon Bagel", description: "Cream cheese, capers, red onion, arugula", price: "$17.00" },
+                { name: "Granola Bowl", description: "House granola, Greek yogurt, fresh berries, honey", price: "$13.00" },
+                { name: "Rooftop Omelette", description: "Three eggs, choice of fillings, side salad", price: "$16.00" }
+            ],
+            pastries: [
+                { name: "Butter Croissant", description: "Flaky, golden, French-style croissant", price: "$4.50" },
+                { name: "Almond Croissant", description: "Filled with almond cream, topped with sliced almonds", price: "$5.50" },
+                { name: "Chocolate Croissant", description: "Pain au chocolat with Belgian dark chocolate", price: "$5.00" },
+                { name: "Cinnamon Roll", description: "House-made with cream cheese frosting", price: "$5.75" },
+                { name: "Blueberry Muffin", description: "Fresh blueberries, lemon zest, crumb topping", price: "$4.75" },
+                { name: "Scone of the Day", description: "Ask server for today's flavor", price: "$4.50" },
+                { name: "Banana Bread", description: "Moist, walnut-studded, served warm", price: "$5.00" },
+                { name: "Danish Pastry", description: "Seasonal fruit or cheese filling", price: "$5.25" },
+                { name: "Biscotti", description: "Almond or chocolate chip, perfect for dipping", price: "$3.50" },
+                { name: "Lemon Tart", description: "Tangy lemon curd, buttery shortbread crust", price: "$6.50" }
+            ],
+            cocktails: [
+                { name: "Solara Spritz", description: "Aperol, prosecco, soda, orange", price: "$12.00" },
+                { name: "Rooftop Mule", description: "Vodka, ginger beer, lime, fresh mint", price: "$11.00" },
+                { name: "Lavender Martini", description: "Gin, lavender syrup, lemon, edible flowers", price: "$14.00" },
+                { name: "Espresso Martini", description: "Vodka, coffee liqueur, fresh espresso", price: "$13.00" },
+                { name: "Pacific Sunset", description: "Tequila, blood orange, lime, agave", price: "$12.00" },
+                { name: "Cucumber Cooler", description: "Gin, cucumber, elderflower, prosecco", price: "$13.00" },
+                { name: "Old Fashioned", description: "Bourbon, bitters, orange, luxardo cherry", price: "$14.00" },
+                { name: "Basil Smash", description: "Gin, fresh basil, lemon, simple syrup", price: "$12.00" },
+                { name: "Rosé Sangria", description: "Rosé wine, seasonal fruit, brandy", price: "$11.00" },
+                { name: "Spicy Margarita", description: "Tequila, jalapeño, lime, tajín rim", price: "$13.00" }
+            ]
+        };
+
+        // Toggle mobile menu
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+
+        // Open menu modal
+        function openMenuModal(category) {
+            const modal = document.getElementById('menuModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const menuItems = document.getElementById('menuItems');
+
+            modalTitle.textContent = category.toUpperCase();
+            menuItems.innerHTML = '';
+
+            menuData[category].forEach(item => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'menu-item';
+                itemDiv.innerHTML = `
+                    <div class="item-info">
+                        <h4>${item.name}</h4>
+                        <p>${item.description}</p>
+                    </div>
+                    <div class="item-price">${item.price}</div>
+                `;
+                menuItems.appendChild(itemDiv);
+            });
+
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close menu modal
+        function closeMenuModal() {
+            const modal = document.getElementById('menuModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function (event) {
+            const modal = document.getElementById('menuModal');
+            if (event.target == modal) {
+                closeMenuModal();
+            }
+        }
+
+        // Handle reservation submission
+        function handleReservation(e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+
+            alert(`Thank you for your reservation!\n\nName: ${data.name}\nDate: ${data.date}\nTime: ${data.time}\nGuests: ${data.guests}\n\nWe'll send a confirmation to ${data.email} shortly.`);
+            e.target.reset();
+        }
+
+        // Handle contact form submission
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            e.target.reset();
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    document.getElementById('nav-menu').classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>this is the whole code
