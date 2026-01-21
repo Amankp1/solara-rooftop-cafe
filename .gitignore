@@ -2,3 +2,9 @@ node_modules/
 .DS_Store
 Thumbs.db
 *.log
+
+# Large files not needed for deployment
+7231138-uhd_4096_2160_25fps.mp4
+image copy.png
+image
+New_code/
